@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react'
+import { supabase } from '../lib/supabaseClient'
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Separator } from '@/components/ui/separator';
 import { Mail, Phone, MapPin, Facebook, Linkedin, Instagram, ArrowUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const Footer = () => {
   const quickLinks = [
     { name: 'Home', href: '/' },
@@ -15,6 +15,43 @@ const Footer = () => {
     { name: 'Testimonials', href: '/testimonials' },
     { name: 'Contact Us', href: '/contact' }
   ];
+
+  const [email, setEmail] = useState('')
+const [loading, setLoading] = useState(false)
+const [message, setMessage] = useState<string | null>(null)
+
+const handleSubscribe = async () => {
+  if (!email) {
+    setMessage('Please enter an email address.')
+    return
+  }
+  const re = /^\S+@\S+\.\S+$/
+  if (!re.test(email)) {
+    setMessage('Please enter a valid email address.')
+    return
+  }
+
+  setLoading(true)
+  setMessage(null)
+
+  const { error } = await supabase
+    .from('newsletter_subscribers')
+    .insert([{ email }])
+
+  if (error) {
+    console.error(error)
+    if ((error as any).code === '23505' || /duplicate/i.test(error.message)) {
+      setMessage('This email is already subscribed.')
+    } else {
+      setMessage('Error: ' + error.message)
+    }
+  } else {
+    setMessage('Thank you for subscribing!')
+    setEmail('') // clear input
+  }
+
+  setLoading(false)
+}
 
   const services = [
     'In-Home Support',
@@ -48,16 +85,29 @@ const Footer = () => {
             Subscribe to our newsletter for the latest updates on NDIS support services, 
             disability care news, and community events from Perfect Star Care Solution.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
-            <Input
-              type="email"
-              placeholder="Enter your email address"
-              className="bg-white text-gray-900 border-white"
-            />
-            <Button className="bg-white text-compassion-600 hover:bg-gray-100 px-6 font-semibold whitespace-nowrap">
-              Subscribe
-            </Button>
-          </div>
+         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
+  <Input
+    type="email"
+    placeholder="Enter your email address"
+    value={email}
+    onChange={(e) => setEmail(e.target.value)}
+    className="bg-white text-gray-900 border-white"
+  />
+  <Button
+    onClick={handleSubscribe}
+    disabled={loading}
+    className="bg-white text-compassion-600 hover:bg-gray-100 px-6 font-semibold whitespace-nowrap"
+  >
+    {loading ? 'Saving...' : 'Subscribe'}
+  </Button>
+</div>
+
+{/* Show message */}
+{message && (
+  <p className="mt-4 text-sm">
+    {message}
+  </p>
+)}
         </div>
       </div>
 

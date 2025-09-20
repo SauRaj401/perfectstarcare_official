@@ -122,21 +122,21 @@ const AboutSection = () => {
         <div className="mt-20 text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Our Leadership Team</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {[
+           {[
               {
-                name: 'Sarah Johnson',
-                role: 'Founder & CEO',
-                image: 'https://images.unsplash.com/photo-1494790108755-2616b612b47c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+                name: 'Sasendra KC ',
+                role: '',
+                image: '/perfect-images/7758da9e-8898-4c26-8dca-65ee9982ca71.png'
               },
               {
-                name: 'Michael Chen',
-                role: 'Clinical Director',
-                image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+                name: 'Tej Karki',
+                role: '',
+                image: '/perfect-images/7758da9e-8898-4c26-8dca-65ee9982ca71.png'
               },
               {
-                name: 'Emma Williams',
-                role: 'Operations Manager',
-                image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80'
+                name: 'Bina Adhikari',
+                role: '',
+                image: '/perfect-images/7758da9e-8898-4c26-8dca-65ee9982ca71.png'
               }
             ].map((member) => (
               <div key={member.name} className="text-center">

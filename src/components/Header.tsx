@@ -124,7 +124,7 @@ const Header = () => {
           <Link to="/" className="flex items-center group">
             <div className="flex items-center space-x-3">
               <img 
-                src="/lovable-uploads/7758da9e-8898-4c26-8dca-65ee9982ca71.png" 
+                src="/perfect-images/7758da9e-8898-4c26-8dca-65ee9982ca71.png" 
                 alt="Perfect Star Care Solution logo" 
                 className="h-20 w-20 object-contain group-hover:scale-105 transition-transform duration-300"
               />

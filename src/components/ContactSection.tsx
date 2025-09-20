@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { supabase } from '../lib/supabaseClient';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -18,11 +19,30 @@ const ContactSection = () => {
     postalCode: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  // Insert into Supabase table
+  const { error } = await supabase.from('contact_requests').insert([{
+    services_interested: formData.servicesInterested,
+    help_description: formData.helpDescription,
+    first_name: formData.firstName,
+    last_name: formData.lastName,
+    phone_number: formData.phoneNumber,
+    email: formData.email,
+    postal_code: formData.postalCode
+  }]);
+
+  if (error) {
+    toast({
+      title: "Error submitting form",
+      description: error.message,
+      variant: "destructive",
+    });
+  } else {
     toast({
       title: "Form Submitted!",
-      description: "Thank you for your interest. One of our local care experts will be in touch soon.",
+      description: "Thank you for your interest. Our team will be in touch soon.",
     });
     setFormData({
       servicesInterested: '',
@@ -33,7 +53,8 @@ const ContactSection = () => {
       email: '',
       postalCode: ''
     });
-  };
+  }
+};
 
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
@@ -143,7 +164,7 @@ const ContactSection = () => {
       </section>
 
       {/* Main Contact Form Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-800 to-slate-900 relative overflow-hidden">
+      <section  id="contact-form" className="py-20 bg-gradient-to-br from-slate-800 to-slate-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-500/5"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-7xl mx-auto">

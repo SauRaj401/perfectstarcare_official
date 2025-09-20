@@ -13,7 +13,7 @@ const TestimonialsSection = () => {
       name: 'Anonymous Participant',
       role: 'NDIS Participant',
       location: 'VIC',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b47c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+      image: '/perfect-images/7758da9e-8898-4c26-8dca-65ee9982ca71.png',
       rating: 5,
       content: 'Perfect Star Care has made such a difference in my daily life. The staff are kind, respectful, and always willing to help.',
       service: 'Daily Living Support'
@@ -22,20 +22,12 @@ const TestimonialsSection = () => {
       name: 'Anonymous Parent',
       role: 'Parent',
       location: 'Melbourne',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
+      image: '/perfect-images/7758da9e-8898-4c26-8dca-65ee9982ca71.png',
       rating: 5,
       content: 'We feel safe knowing our son has the right support team behind him. Thank you Perfect Star Care for being reliable and caring.',
       service: 'Community Support'
-    },
-    {
-      name: 'Anonymous Family Member',
-      role: 'Family Member',
-      location: 'Melbourne',
-      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80',
-      rating: 5,
-      content: 'Perfect Star Care has given us peace of mind knowing our family member is safe and well supported. Thank you for your dedication.',
-      service: 'Personal Care'
     }
+   
   ];
 
   const nextTestimonial = () => {

@@ -65,7 +65,7 @@ const HeroSection = () => {
 
                       {/* CTA Button */}
                       <div className="flex justify-start">
-                        <Button 
+                        {/* <Button 
                           asChild
                           size="lg" 
                           className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white px-8 py-4 text-lg font-semibold rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
@@ -75,7 +75,7 @@ const HeroSection = () => {
                             Book a Call
                             <ArrowRight className="ml-2 h-5 w-5" />
                           </Link>
-                        </Button>
+                        </Button> */}
                       </div>
 
                       {/* Trust Indicators */}

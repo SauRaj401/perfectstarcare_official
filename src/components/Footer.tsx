@@ -40,7 +40,7 @@ const handleSubscribe = async () => {
 
   if (error) {
     console.error(error)
-    if ((error as any).code === '23505' || /duplicate/i.test(error.message)) {
+    if ((error).code === '23505' || /duplicate/i.test(error.message)) {
       setMessage('This email is already subscribed.')
     } else {
       setMessage('Error: ' + error.message)
@@ -119,7 +119,7 @@ const handleSubscribe = async () => {
             <div className="lg:col-span-1">
               <div className="flex items-center space-x-3 mb-4">
                 <img 
-                  src="/lovable-uploads/7758da9e-8898-4c26-8dca-65ee9982ca71.png" 
+                  src="/perfect-images/7758da9e-8898-4c26-8dca-65ee9982ca71.png" 
                   alt="Perfect Star Care Solution logo" 
                   className="h-14 w-14 object-contain"
                 />

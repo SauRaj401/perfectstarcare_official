@@ -60,14 +60,14 @@ const NDISSection = () => {
     <section id="ndis" className="py-20 bg-gradient-to-br from-compassion-50 to-hope-50">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16">
+        {/* <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             <span className="text-compassion-600">NDIS</span> Information
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             The NDIS is Australia's first national Scheme for people with disability. The NDIS provides funding to eligible people with disability to gain more time with family and friends, greater independence, access to new skills, jobs, or volunteering in their community, and an improved quality of life.
           </p>
-        </div>
+        </div> */}
 
         {/* NDIS Process */}
         <div className="mb-16">

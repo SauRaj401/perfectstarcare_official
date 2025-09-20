@@ -1,6 +1,4 @@
 import { createClient } from '@supabase/supabase-js'
-import nodemailer from 'nodemailer'
-
 
 // Hardcode for now
 const SUPABASE_URL = 'https://rqhuhlygtobrqlydvwqm.supabase.co'

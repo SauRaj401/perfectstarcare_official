@@ -27,7 +27,7 @@ const ServiceDetail = () => {
         'Grooming and dressing assistance',
         'Communication support and advocacy'
       ],
-      image: '/lovable-uploads/66406ded-2444-4ac2-bf9d-b70b087b35ba.png'
+      image: '/perfect-images/66406ded-2444-4ac2-bf9d-b70b087b35ba.png'
     },
     'living-arrangements': {
       title: 'Living Arrangements',
@@ -46,7 +46,7 @@ const ServiceDetail = () => {
         'Furniture and equipment setup',
         'Neighbour and community relationship building'
       ],
-      image: '/lovable-uploads/66406ded-2444-4ac2-bf9d-b70b087b35ba.png'
+      image: '/perfect-images/66406ded-2444-4ac2-bf9d-b70b087b35ba.png'
     },
     'transport-and-access': {
       title: 'Transport & Access',
@@ -63,7 +63,7 @@ const ServiceDetail = () => {
         'Travel planning and coordination',
         'Emergency transport arrangements'
       ],
-      image: '/lovable-uploads/66406ded-2444-4ac2-bf9d-b70b087b35ba.png'
+      image: '/perfect-images/66406ded-2444-4ac2-bf9d-b70b087b35ba.png'
     },
     'health-and-nursing': {
       title: 'Health & Nursing',
@@ -80,7 +80,7 @@ const ServiceDetail = () => {
         'Health education and support',
         'Emergency medical response'
       ],
-      image: '/lovable-uploads/66406ded-2444-4ac2-bf9d-b70b087b35ba.png'
+      image: '/perfect-images/66406ded-2444-4ac2-bf9d-b70b087b35ba.png'
     },
     'skills-and-independence': {
       title: 'Skills & Independence',
@@ -98,7 +98,7 @@ const ServiceDetail = () => {
         'Educational support and tutoring',
         'Transition planning and coordination'
       ],
-      image: '/lovable-uploads/66406ded-2444-4ac2-bf9d-b70b087b35ba.png'
+      image: '/perfect-images/66406ded-2444-4ac2-bf9d-b70b087b35ba.png'
     },
     'social-and-community': {
       title: 'Social & Community',
@@ -117,7 +117,7 @@ const ServiceDetail = () => {
         'Peer support group facilitation',
         'Community advocacy and representation'
       ],
-      image: '/lovable-uploads/66406ded-2444-4ac2-bf9d-b70b087b35ba.png'
+      image: '/perfect-images/66406ded-2444-4ac2-bf9d-b70b087b35ba.png'
     },
     'household-support': {
       title: 'Household Support',
@@ -132,7 +132,7 @@ const ServiceDetail = () => {
         'Garden maintenance',
         'Emptying and disposing of bins'
       ],
-      image: '/lovable-uploads/66406ded-2444-4ac2-bf9d-b70b087b35ba.png'
+      image: '/perfect-images/66406ded-2444-4ac2-bf9d-b70b087b35ba.png'
     }
   };
 

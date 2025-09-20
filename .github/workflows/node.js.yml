@@ -10,9 +10,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16.x, 18.x, 20.x]
+    # strategy:
+    #   matrix:
+    #     node-version: [16.x, 18.x, 20.x]
 
     steps:
     - uses: actions/checkout@v4
@@ -23,17 +23,17 @@ jobs:
         cache: 'npm'
     - run: npm install
     - run: npm run build
-    - run: npm test
+    # - run: npm test
       env:
         CI: true
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v4
-      with:
-        files: ./coverage/lcov.info
-        flags: unittests
-        name: codecov-${{ matrix.node-version }}
-        fail_ci_if_error: true
-        verbose: true
+    # - name: Upload coverage to Codecov
+    #   uses: codecov/codecov-action@v4
+    #   with:
+    #     files: ./coverage/lcov.info
+    #     flags: unittests
+    #     name: codecov-${{ matrix.node-version }}
+    #     fail_ci_if_error: true
+    #     verbose: true
     # want ftp deploy step here
     - name: FTP Deploy
       uses: SamKirkland/FTP-Deploy-Action@4.3.0

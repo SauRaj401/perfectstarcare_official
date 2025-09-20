@@ -24,8 +24,8 @@ jobs:
     - run: npm install
     - run: npm run build
     # - run: npm test
-      env:
-        CI: true
+    #   env:
+    #     CI: true
     # - name: Upload coverage to Codecov
     #   uses: codecov/codecov-action@v4
     #   with:
@@ -35,16 +35,16 @@ jobs:
     #     fail_ci_if_error: true
     #     verbose: true
     # want ftp deploy step here
-    - name: FTP Deploy
-      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+    - name: Pefect Star Care - FTP Deploy
+      uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
         server: perfectstarcare.com.au
         username: pscftp@perfectstarcare.com.au
         password: H!]BIWA}Y*s*
         local-dir: ./dist
-        server-dir: /dist
-        protocol: ftps
-        port: 21
-        dry-run: false
-        log-level: info
+        # server-dir: /dist
+        # protocol: ftps
+        # port: 21
+        # dry-run: false
+        # log-level: info
        

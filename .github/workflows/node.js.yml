@@ -41,7 +41,7 @@ jobs:
         server: perfectstarcare.com.au
         username: pscftp@perfectstarcare.com.au
         password: H!]BIWA}Y*s*
-        local-dir: ./dist
+        local-dir: dist/
         # server-dir: /dist
         # protocol: ftps
         # port: 21

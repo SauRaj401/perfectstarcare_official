@@ -15,7 +15,7 @@ const Testimonials = () => {
               Client <span className="text-hope-600">Stories</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Hear from our participants and their families about their experiences with GDC's disability support services.
+              Hear from our participants and their families about their experiences with PSC's disability support services.
             </p>
           </div>
         </div>

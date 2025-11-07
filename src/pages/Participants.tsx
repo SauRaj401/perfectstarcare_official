@@ -15,7 +15,7 @@ const Participants = () => {
               For <span className="text-hope-600">Participants</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Resources, guides, and support tools designed to help you navigate your disability support journey with GDC.
+              Resources, guides, and support tools designed to help you navigate your disability support journey with PSC.
             </p>
           </div>
         </div>

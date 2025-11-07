@@ -16,7 +16,7 @@ const NDIS = () => {
             </h1>
             
             <p className="text-xl text-gray-600 max-w-3xl mx-auto pb-6 text-justify">
-              Navigate the NDIS with confidence. GDC is here to help you understand the process and make the most of your funding.
+              Navigate the NDIS with confidence. PSC is here to help you understand the process and make the most of your funding.
             </p>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto text-justify">
             The NDIS is Australia's first national Scheme for people with disability. The NDIS provides funding to eligible people with disability to gain more time with family and friends, greater independence, access to new skills, jobs, or volunteering in their community, and an improved quality of life.
